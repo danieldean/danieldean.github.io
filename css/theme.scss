@@ -47,9 +47,6 @@ div.fuse-core-content {
 
 h1 {
     letter-spacing: 0.1em;
-    @media (max-width: 575.98px) {  /* used on bootstrap size 'xs' */
-        letter-spacing: 0;
-    }
     font-size: 3em;
 }
 h3 {
@@ -63,6 +60,9 @@ div.row.links {
     > div {
         white-space: nowrap;
         padding: 0;
+        @media (max-width: 575.98px) {  /* used on bootstrap size 'xs' */
+            width: 90px;
+        }
     }
     a {
         color: white;
@@ -72,10 +72,6 @@ div.row.links {
         font-size: 1.8em;
         line-height: 1em;
         overflow: hidden;
-        @media (max-width: 575.98px) {  /* used on bootstrap size 'xs' */
-            border-radius: 10px;
-            width: 100%;
-        }
 
         &:hover {
             text-decoration: none;
@@ -125,16 +121,16 @@ footer {
     padding: 10px 0;
     width: 100%;
     font-size: smaller;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgb(255, 255, 255);
 
     .col {
         padding: 0;
     }
     a {
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
+        color: rgb(255, 255, 255);
+        text-decoration: underline;
         &:hover {
-            text-decoration: none;
+            text-decoration: underline;
             color: white;
         }
     }
